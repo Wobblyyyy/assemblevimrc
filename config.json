@@ -1,0 +1,70 @@
+{
+    "sources": [
+        {
+            "name": "vim.vimrc",
+            "path": "src/vim.vimrc"
+        },
+        {
+            "name": "default.vimrc",
+            "path": "src/default.vimrc"
+        },
+        {
+            "name": "idea.vimrc",
+            "path": "src/idea.vimrc"
+        },
+        {
+            "name": "settings.vimrc",
+            "path": "src/settings.vimrc"
+        }
+    ],
+    "outputs": [
+        {
+            "path": ".vimrc",
+            "syspath": ".vimrc",
+            "include": [
+                "settings.vimrc",
+                "plugins",
+                "vim.vimrc",
+                "default.vimrc"
+            ]
+        },
+        {
+            "path": ".neovimrc",
+            "syspath": ".neovimrc",
+            "include": [
+                "settings.vimrc",
+                "plugins",
+                "vim.vimrc",
+                "default.vimrc"
+            ]
+        },
+        {
+            "path": ".ideavimrc",
+            "syspath": ".ideavimrc",
+            "include": [
+                "default.vimrc",
+                "idea.vimrc"
+            ]
+        }
+    ],
+    "plugins": [
+        "scrooloose/nerdtree",
+        "tpope/vim-commentary",
+        "tpope/vim-surround",
+        "scrooloose/nerdcommenter",
+        "luochen1990/rainbow",
+        "rhysd/vim-github-support",
+        "powerline/powerline-fonts",
+        "vim-airline/vim-airline",
+        "vim-airline/vim-airline-themes",
+        "joshdick/onedark.vim",
+        "pangloss/vim-javascript",
+        "yggdroot/indentline",
+        "raimondi/delimitmate",
+        "leafgarland/typescript-vim",
+        "elzr/vim-json",
+        "othree/html5.vim",
+        "lervag/vimtex"
+    ]
+}
+
