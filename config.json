@@ -64,7 +64,10 @@
         "leafgarland/typescript-vim",
         "elzr/vim-json",
         "othree/html5.vim",
-        "lervag/vimtex"
+        "lervag/vimtex",
+        "ollykel/v-vim",
+        "sickill/vim-monokai",
+        "NoorWachid/VimVLanguage"
     ]
 }
 
