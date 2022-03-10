@@ -1,20 +1,24 @@
 {
     "sources": [
         {
-            "name": "vim.vimrc",
-            "path": "src/vim.vimrc"
+            "name": "init.vim",
+            "path": "src/init.vim"
         },
         {
-            "name": "default.vimrc",
-            "path": "src/default.vimrc"
+            "name": "plugins.vim",
+            "path": "src/plugins.vim"
         },
         {
-            "name": "idea.vimrc",
-            "path": "src/idea.vimrc"
+            "name": "bindings.vim",
+            "path": "src/bindings.vim"
         },
         {
-            "name": "settings.vimrc",
-            "path": "src/settings.vimrc"
+            "name": "colors.vim",
+            "path": "src/colors.vim"
+        },
+        {
+            "name": "nvim.vim",
+            "path": "src/nvim.vim"
         }
     ],
     "outputs": [
@@ -22,52 +26,31 @@
             "path": ".vimrc",
             "syspath": ".vimrc",
             "include": [
-                "settings.vimrc",
-                "plugins",
-                "vim.vimrc",
-                "default.vimrc"
+                "init.vim",
+                "nvim.vim",
+                "plugins.vim",
+                "bindings.vim",
+                "colors.vim"
             ]
         },
         {
-            "path": ".neovimrc",
-            "syspath": ".neovimrc",
+            "path": ".nvimrc",
+            "syspath": ".nvimrc",
             "include": [
-                "settings.vimrc",
-                "plugins",
-                "vim.vimrc",
-                "default.vimrc"
+                "init.vim",
+                "nvim.vim",
+                "plugins.vim",
+                "bindings.vim",
+                "colors.vim"
             ]
         },
         {
             "path": ".ideavimrc",
             "syspath": ".ideavimrc",
             "include": [
-                "default.vimrc",
-                "idea.vimrc"
+                "bindings.vim"
             ]
         }
-    ],
-    "plugins": [
-        "scrooloose/nerdtree",
-        "tpope/vim-commentary",
-        "tpope/vim-surround",
-        "scrooloose/nerdcommenter",
-        "luochen1990/rainbow",
-        "rhysd/vim-github-support",
-        "powerline/powerline-fonts",
-        "vim-airline/vim-airline",
-        "vim-airline/vim-airline-themes",
-        "joshdick/onedark.vim",
-        "pangloss/vim-javascript",
-        "yggdroot/indentline",
-        "raimondi/delimitmate",
-        "leafgarland/typescript-vim",
-        "elzr/vim-json",
-        "othree/html5.vim",
-        "lervag/vimtex",
-        "ollykel/v-vim",
-        "sickill/vim-monokai",
-        "NoorWachid/VimVLanguage"
     ]
 }
 
