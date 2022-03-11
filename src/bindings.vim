@@ -25,3 +25,4 @@ nnoremap <S-H> v0x"_
 " N repeats the last search going backwards
 " M repeats the last search going forwards
 noremap <S-M> n
+

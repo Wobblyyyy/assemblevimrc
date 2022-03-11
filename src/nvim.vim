@@ -51,21 +51,27 @@ nmap gr <Plug>(coc-references)
 " zr reloads the .nvimrc file
 noremap zr :source %<cr>
 
+" zs toggles spellchecking
+noremap zs :setlocal spell! spelllang=en_us<cr>
+
+" zm toggles GitGutter
+noremap zm :GitGutterToggle<cr>
+
 " gm displays the current syntax group
 noremap gm :call SynGroup()<cr>
 
 " if the autocompletion window is visible, and tab is pressed, automatically
 " navigate to the first suggestion.
 inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " pressing enter will select the currently highlighted suggestion
 inoremap <silent><expr> <cr>
-            \ pumvisible() ? coc#_select_confirm()
-            \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    \ pumvisible() ? coc#_select_confirm()
+    \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " ctrl+n in insert mode will refresh autocompletion suggestions
 inoremap <silent><expr> <C-@> coc#refresh()
@@ -75,3 +81,4 @@ function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1] =~# '\s'
 endfunction
+

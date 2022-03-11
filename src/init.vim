@@ -117,3 +117,4 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 
 " set the leader key to comma
 let mapleader = ','
+

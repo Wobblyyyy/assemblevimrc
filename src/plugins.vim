@@ -5,6 +5,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'luochen1990/rainbow'
 Plug 'rhysd/vim-github-support'
 Plug 'powerline/powerline-fonts'
@@ -22,9 +23,12 @@ Plug 'sickill/vim-monokai'
 Plug 'NoorWachid/VimVLanguage'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', {
+    \ 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {
+    \ 'branch': 'master',
+    \ 'do': 'yarn install --frozen-lockfile' }
 Plug 'benwainwright/fzf-project'
 Plug 'chriskempson/base16-vim'
 Plug 'wakatime/vim-wakatime'
@@ -32,9 +36,8 @@ Plug 'jesseleite/vim-agriculture'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier', {
-            \ 'do': 'yarn install --frozen-lockfile --production',
-            \ 'branch': 'release/0.x'
-            \ }
+    \ 'do': 'yarn install --frozen-lockfile --production',
+    \ 'branch': 'release/0.x' }
 call plug#end()
 
 " configure NERDTree
@@ -75,22 +78,23 @@ let g:vim_json_syntax_conceal=0
 
 " set up fzf color scheme to match normal color scheme
 let g:fzf_colors = {
-            \ 'fg':      ['#87ff00', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'border':  ['fg', 'Ignore'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
+    \ 'fg':      ['#87ff00', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
 
 " configure fzf to use rg for finding files
 " let me ask you this... who doesn't love ripgrep?
 let $FZF_DEFAULT_COMMAND='rg --files'
 let $FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 let $FZF_ALT_C_COMMAND='rg --files'
+
